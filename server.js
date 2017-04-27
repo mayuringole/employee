@@ -50,6 +50,6 @@ app.put('/employeelist/:id', function(req,res){
 		res.json(doc);
 	});
 });
-
-app.listen(3000);
+var port = process.env.PORT || 3000;
+app.listen(port);
 console.log("server running on port 3000");
