@@ -23,6 +23,7 @@
 					<th>Date of Birth</th>
 					<th>Department</th>
 					<th>Gender</th>
+					<th>Age</th>
 					<th></th>
 					<th></th>
 				</tr>
@@ -31,9 +32,10 @@
 			<tr>
 			<td><input class="form-control" ng-model="employee.name" placeholder="name"></td>
 			<td><input class="form-control" ng-model="employee.email" placeholder="name@email.com"></td>
-			<td><input class="form-control" ng-model="employee.dateofbirth" placeholder="dd-mm-yyyy"></td>
+			<td><input class="form-control" ng-model="employee.dateofbirth" placeholder="mm-dd-yyyy"></td>
 			<td><input class="form-control" ng-model="employee.department" placeholder="department"></td>
 			<td><input class="form-control" ng-model="employee.gender" placeholder="gender"></td>
+			<td><input class="form-control"  placeholder="Age"></td>
 			<td><button class="btn btn-primary" ng-click="addEmployee()">Add Employee</button></td>
 			<td><button class="btn btn-primary" ng-click="update()">Update</button></td>
 			</tr>
@@ -43,6 +45,7 @@
 				<td>{{employee.dateofbirth}}</td>
 				<td>{{employee.department}}</td>
 				<td>{{employee.gender}}</td>
+				<td>{{employee.age}}</td>
 				<td><button class="btn btn-danger" ng-click="remove(employee._id)">Remove</button></td>
 				<td><button class="btn btn-warning" ng-click="edit(employee._id)">Edit</button></td>
 				</tr>

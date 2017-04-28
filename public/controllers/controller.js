@@ -8,6 +8,11 @@ $http.get('/employeelist').then(successCallback).catch(errorCallback);
 function successCallback(response){
     console.log("I got the data I requested");
 	$scope.employeelist = response.data;
+
+	for(var i = 0 ; i < $scope.employeelist.length; i++){
+		$scope.employeelist[i].age = new Date().getFullYear() - new Date($scope.employeelist[i].dateofbirth).getFullYear();
+	}
+
 }
 function errorCallback(error){
     console.log("I did not get the data I requested");
